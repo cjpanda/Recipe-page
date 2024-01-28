@@ -57,9 +57,11 @@ table {
 }
 
 hr {
-  opacity: 40%;
-  padding: 10px;
-  border-left: transparent;
+  opacity: 20%;
+  border: none;
+  background-color: #854632;
+  margin: 10px 0;
+  height: 1px;
 }
 
 h2 {
