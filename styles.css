@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-family: "Young Serif", serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3e6d8;
+  margin: 0;
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "•";
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+  display: inline-block;
+  width: 2em;
+  margin-left: -0.5em;
+}
+
+ol li::before {
+  content: counter(ol-li) ".";
+  color: #854632;
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5rem;
+  counter-increment: ol-li;
+  font-weight: 700;
+}
+
+ol {
+  counter-reset: ol-li;
+}
+li {
+  padding: 10px;
+}
+
+p,
+li,
+table {
+  font-family: "Outfit", sans-serif;
+  opacity: 70%;
+}
+
+hr {
+  opacity: 40%;
+  padding: 10px;
+  border-left: transparent;
+}
+
+h2 {
+  color: #854632;
+}
+
+.header {
+  opacity: 80%;
+}
+.preparation {
+  font-family: "Outfit", sans-serif;
+  padding: 20px;
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 20px;
+}
+.preparation-title {
+  color: #7b284f;
+}
+
+.ingredients {
+  margin-bottom: 10px;
+}
+
+.row {
+  font-weight: 800;
+  color: #854632;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.8rem;
+}
+tr {
+  border-bottom: 1px solid #b9b7b7;
+}
+tr:last-child {
+  border-bottom: none;
+}
+
+.img-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-cover img {
+  max-width: 100%;
+  height: auto; /* Maintains the image's aspect ratio */
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 0px;
+  }
+  .img-cover {
+    /* Reset styles for smaller screens */
+    display: block;
+    text-align: center;
+  }
+
+  .img-cover img {
+    border-radius: 0px;
+  }
+  .container {
+    padding: 0; /* Remove padding on smaller screens */
+  }
+  .text-content {
+    padding: 20px; /* Apply padding to text content */
+  }
+}
